@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="livrariaKafka">
+    <meta name="author" content="Victoria Guimaraes">
+    <meta name="keywords" content="livraria">
+    <title>Infantil</title>
+    <link rel="shortcut icon" href="{%static 'C:\Kafka\assets\static\img\header\iconPag.png' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/reader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/produtos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/footer.css' %}">
+
+    <script src="{%static 'C:\Kafka\assets\static\js\slider.js'%}" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Logo e caixa de pesquisa -->
+        <img id="kafkaLogo" src="{%static 'C:\Kafka\assets\static\img\header\kafkaLogo.png' %}">
+        <div class="search_box">
+            <input type="text" placeholder="Pesquise aqui">
+            <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Lista de icons -->
+        <ul>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconHeart.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconCar.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconUser.png' %}"></a></li>
+        </ul>
+
+    </header>
+
+    <!-- Menu e submenu -->
+    <nav class="navigation">
+
+        <ul>
+            <li class="menuItens"><a href="{%url 'home'%}">Home</a></li>
+            <li class="menuItens"><a href="#">Livros</a>
+                <!-- Submenu -->
+                <!-- <div class="div-submenu"> -->
+                <ul>
+                    <li class="subMenu"><a href="#">Geek</a></li>
+                    <li class="subMenu"><a href="{%url 'ebook'%}">Ebook</a></li>
+                    <li class="subMenu"><a href="#">Infantil</a></li>
+                    <li class="subMenu"><a href="#">Ofertas</a></li>
+                    <li class="subMenu"><a href="#">Estudos</a></li>
+                    <li class="subMenu"><a href="{%url 'importados'%}">Importados</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="menuItens"><a href="#">DVDs</a></li>
+            <li class="menuItens"><a href="#">Quem Somos</a></li>
+            <li class="menuItens"><a href="#">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <div class="area-card">
+                <!-- Card Educativos -->
+                <h1>Infantil</h1>
+                <h2>Educativos</h2>
+
+                <div class="slider">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\infantil\creche-educacao-infantil.jpg'%}"
+                            alt="">
+                        <h3>Creche- Educacao Infantil (Escolinha Todolivro)</h3>
+
+                        <p class="autor">Maria Angela Finzetto</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Exercícios de apoio escolar com atividades de colorir, ligar pontos e associar elementos
+                                por semelhança ou analogia de função, entre outras. Ferramenta de auxílio aos pais e
+                                professores.
+                            </p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$10,21</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\infantil\marcha-crianca.jpg' %}" alt="">
+                        <h3>Marcha criança - Educação infantil - Linguagem - Volume 3</h3>
+                        <p class="autor">Maria Teresa, Maria Elisabete</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Um material adequado para a elaboração do planejamento anual das escolas nas principais
+                                áreas do currículo: Linguagem, Matemática e Sociedade e Natureza. </p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$143,00</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\infantil\aprenda-em-casa.jpg'%}" alt="">
+                        <h3>Coleção Aprenda em Casa</h3>
+
+                        <p class="autor"> Vários Autores </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Estes livros irão ajudar a criança a reforçar conteúdos escolares além de desenvolver
+                                habilidades importantes como: raciocínio lógico, criatividade e vocabulário. Acompanhe a
+                                criança nesta jornada!</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$12,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\infantil\caligrafia.jpg'%}"
+                            alt="">
+                        <h3>Caligrafia Divertida - Numerais</h3>
+
+                        <p class="autor">Clécia A. Buchweitz</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Você já aprendeu a escrever os números? Será que o número oito são apenas duas bolinhas?
+                                Aprenda brincando como traçar os números cobrindo os pontilhados e depois treinando
+                                sozinho.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$1,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="area-card">
+                <!-- Card contos -->
+                <h2>Contos</h2>
+
+                <div class="slider">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\infantil\porquinhos.jpg'%}"
+                            alt="">
+                        <h3>Os Três Porquinhos</h3>
+
+                        <p class="autor">Susie Books</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Cada um dos TRÊS PORQUINHOS porquinhos construiu uma casa na floresta, mas um LOBO
+                                MALVADO estava pronto para estragar a festa!
+                            </p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$14,21</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\infantil\conto-caes.jpg' %}"
+                            alt="">
+                        <h3>Contos De Cães - Histórias Verdadeiras Sobre Cães</h3>
+                        <p class="autor">Penelope Rich</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Coragem, lealdade e inteligência aquecerá o coração de qualquer amante de cães. Descubra
+                                sobre Mera, o destemido cão montanhista, Jasmine, o Greyhound que resgatou veados e
+                                raposas bebês, e Otto, o famoso bulldog skatista
+                            </p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$19,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\infantil\tuerma-da-monica.jpg'%}" alt="">
+                        <h3>Turma da Mônica - Contos da Carochinha</h3>
+
+                        <p class="autor"> Mauricio Sousa</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>11 contos que vivem para sempre no mundo da imaginação de todas as crianças. As histórias
+                                – interpretadas pelos personagens da Turma da Mônica – trazem à tona valores universais
+                                como o esforço e a superação, a amizade e o amor. </p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$12,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\infantil\cobras-em-compota.jpg'%}" alt="">
+                        <h3>Cobras em Compota</h3>
+
+                        <p class="autor">Vários Autores</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Um conjunto brilhante, inventivo e divertido de crônicas autobiográficas da autora. Os
+                                textos da primeira parte debruçam-se sobre os acontecimentos da sua infância os da
+                                segunda, sobre os de sua "adultice"</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$43,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="area-footer">
+
+            <div class="i-r">
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\twitter.png'%}" alt=""></i></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\linkedin.png'%}" alt=""></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\github.png'%}" alt=""></a>
+            </div>
+        </div>
+        <div class="pFooter">
+            <p>Desenvolvido pelo grupo 6 na aula de programação do <a href="">PDA</a> </p>
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

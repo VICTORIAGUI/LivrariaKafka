@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="livrariaKafka">
+    <meta name="author" content="Victoria Guimaraes">
+    <meta name="keywords" content="livraria">
+    <title>Importados</title>
+    <link rel="shortcut icon" href="{%static 'C:\Kafka\assets\static\img\header\iconPag.png' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/reader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/produtos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/footer.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Logo e caixa de pesquisa -->
+        <img id="kafkaLogo" src="{%static 'C:\Kafka\assets\static\img\header\kafkaLogo.png' %}">
+        <div class="search_box">
+            <input type="text" placeholder="Pesquise aqui">
+            <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Lista de icons -->
+        <ul>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconHeart.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconCar.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconUser.png' %}"></a></li>
+        </ul>
+
+    </header>
+
+    <!-- Menu e submenu -->
+    <nav class="navigation">
+
+        <ul>
+            <li class="menuItens"><a href="{%url 'home'%}">Home</a></li>
+            <li class="menuItens"><a href="#">Livros</a>
+                <!-- Submenu -->
+                <!-- <div class="div-submenu"> -->
+                <ul>
+                    <li class="subMenu"><a href="#">Geek</a></li>
+                    <li class="subMenu"><a href="{%url 'ebook'%}">Ebook</a></li>
+                    <li class="subMenu"><a href="{%url 'infantil'%}">Infantil</a></li>
+                    <li class="subMenu"><a href="#">Ofertas</a></li>
+                    <li class="subMenu"><a href="#">Estudos</a></li>
+                    <li class="subMenu"><a href="{%url 'importados'%}">Importados</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="menuItens"><a href="#">DVDs</a></li>
+            <li class="menuItens"><a href="#">Quem Somos</a></li>
+            <li class="menuItens"><a href="#">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <div class="area-card">
+                <!-- Card Romance -->
+                <h1>Importados</h1>
+                <h2>Inglês</h2>
+
+                <div class="slider">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\just-forgot.jpg'%}" alt="">
+                        <h3>I Just Forgot</h3>
+
+                        <p class="autor">Mercer Mayer</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Mercer Mayer's Little Critter is having a very forgetful day. Whether he's forgetting his lunchbox, forgetting to put on his rain boots, both parents and children alike will relate to this beloved story.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$57,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\evelyn-hugo.jpg' %}" alt="">
+                        <h3>Seven Husbands of Evelyn Hugo</h3>
+                        <p class="autor">Taylor Jenkins Reid </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>A legendary film actress reflects on her relentless rise to the top and the risks she took, the loves she lost, and the long-held secrets the public could never imagine.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$2,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\importados\amazonia.jpg'%}"
+                            alt="">
+                        <h3>Sebastião Salgado. Amazônia</h3>
+
+                        <p class="autor">Taschen</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>For six years Sebastião Salgado traveled the Brazilian Amazon and photographed the unparalleled beauty of this extraordinary region: the rainforest, the rivers, the mountains, the people who live there.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$39,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\the-cat.jpg'%}"
+                            alt="">
+                        <h3>The Cat in the Hat Comes Back!</h3>
+
+                        <p class="autor"> Dr Seuss</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p> It's winter and they have mountains of snow to shovel. So when the Cat comes to visit, he decides to go inside and to take a bath. No problem, right? Wrong!</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$34,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="area-card">
+                <!-- Card Espanhol -->
+                <h2>Espanhol</h2>
+
+                <div class="slider">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\el-principito.jpg'%}" alt="">
+                        <h3>El Principito</h3>
+
+                        <p class="autor"> Antoine de Saint-Exupery</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>"He aquí mi secreto, que no puede ser más simple: solo con el corazón se puede ver bien; lo esencial es invisible a los ojos".
+                             Relato filosófico que interroga acerca de la relación del ser humano con su prójimo y con el mundo.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$42,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\la-loca-de-la-casa.jpg' %}" alt="">
+                        <h3>La Loca de la Casa</h3>
+                        <p class="autor">Rosa Monteiro</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Este libro es una novela, un ensayo, una autobiografía. La loca de la casa es la obra más personal de Rosa Montero, un recorrido por los entresijos de la fantasía, de la creación artística y de los recuerdos más secretos.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$2,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\importados\la-casa-de-los-espiritos.jpg'%}"
+                            alt="">
+                        <h3>La Casa de los Espíritus</h3>
+
+                        <p class="autor">Isabel Allende </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>La casa de los espíritus' narra la saga familiar de los Trueba, desde principios de siglo hasta nuestra época. Magistralmente ambientada en algún lugar de América Latina.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$39,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\importados\cita-con-la-muerte.jpg'%}"
+                            alt="">
+                        <h3>Cita Con La Muerte</h3>
+
+                        <p class="autor">Agatha Christie </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Durante un placentero viaje a Oriente Medio, entre las ruinas de Petra, aparece el cuerpo de la matriarca de la poderosa familia Boynton. La pequeña marca de un pinchazo en la muñeca es la única prueba de que ha sido asesinada.!</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$34,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="area-footer">
+
+            <div class="i-r">
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\twitter.png'%}" alt=""></i></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\linkedin.png'%}" alt=""></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\github.png'%}" alt=""></a>
+            </div>
+        </div>
+        <div class="pFooter">
+            <p>Desenvolvido pelo grupo 6 na aula de programação do <a href="">PDA</a> </p>
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>

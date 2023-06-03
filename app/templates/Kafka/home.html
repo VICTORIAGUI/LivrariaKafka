@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="livrariaKafka">
+    <meta name="author" content="Victoria Guimaraes">
+    <meta name="keywords" content="livraria">
+    <title>Kafka Livraria</title>
+    <link rel="shortcut icon" href="{%static 'C:\Kafka\assets\static\img\header\iconPag.png' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/reader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/flipbook.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/cards.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'global/css/footer.css' %}">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{%static 'C:\Kafka\assets\static\js\slider.js'%}" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Logo e caixa de pesquisa -->
+        <img id="kafkaLogo" src="{%static 'C:\Kafka\assets\static\img\header\kafkaLogo.png' %}">
+        <div class="search_box">
+            <input type="text" placeholder="Pesquise aqui">
+            <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Lista de icons -->
+        <ul>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconHeart.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconCar.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img
+                        src="{%static 'C:\Kafka\assets\static\img\header\iconUser.png' %}"></a></li>
+        </ul>
+
+    </header>
+
+    <!-- Menu e submenu -->
+    <nav class="navigation">
+
+        <ul>
+            <li class="menuItens"><a href="#">Home</a></li>
+            <li class="menuItens"><a href="#">Livros</a>
+                <!-- Submenu -->
+                <!-- <div class="div-submenu"> -->
+                <ul>
+                    <li class="subMenu"><a href="#">Geek</a></li>
+                    <li class="subMenu"><a href="{%url 'ebook'%}">Ebook</a></li>
+                    <li class="subMenu"><a href="{%url 'infantil'%}">Infantil</a></li>
+                    <li class="subMenu"><a href="#">Ofertas</a></li>
+                    <li class="subMenu"><a href="#">Estudos</a></li>
+                    <li class="subMenu"><a href="{%url 'importados'%}">Importados</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="menuItens"><a href="#">DVDs</a></li>
+            <li class="menuItens"><a href="#">Quem Somos</a></li>
+            <li class="menuItens"><a href="#">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <!-- Menu de icones -->
+            <div class="icons-circulo">
+                <ul>
+                    <li><a href="#"><img src="{%static 'C:\Kafka\assets\static\img\home\hand-spock-solid.png'%}"
+                                alt=""></a></li>
+                    <li><a href="{%url 'ebook'%}"><img
+                                src="{%static 'C:\Kafka\assets\static\img\home\mobile-screen-button-solid.png'%}"
+                                alt=""></a></li>
+                    <li><a href="{%url 'infantil'%}"><img
+                                src="{%static 'C:\Kafka\assets\static\img\home\cubes-stacked-solid.png'%}"
+                                alt=""></a></li>
+                    <li><a href="#"><img src="{%static 'C:\Kafka\assets\static\img\home\tags-solid.png'%}"
+                                alt=""></a></li>
+                    <li><a href="#"><img
+                                src="{%static 'C:\Kafka\assets\static\img\home\graduation-cap-solid.png'%}"
+                                alt=""></a></li>
+                    <li><a href="{%url 'importados'%}"><img
+                                src="{%static 'C:\Kafka\assets\static\img\home\earth-americas-solid.png'%}"
+                                alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+
+            <!-- Livro -->
+            <div class="area-livro">
+
+                <!-- Input para transição de página -->
+                <input type="checkbox" id="checkbox-capa">
+                <input type="checkbox" id="checkbox-pag1">
+                <input type="checkbox" id="checkbox-pag2">
+                <input type="checkbox" id="checkbox-pag3">
+                <input type="checkbox" id="checkbox-pag4">
+                <input type="checkbox" id="checkbox-pag5">
+                <input type="checkbox" id="checkbox-pag6">
+
+                <!-- Capa do livro -->
+                <div class="livro">
+                    <!-- Usando o style inline pois o django não reconhece o background-image no css. -->
+                    <div class="capa"
+                        style="background-image: url({%static 'C:\Kafka\assets\static\img\home\mais-vendidos.png'%})">
+                        <label for="checkbox-capa"><i class="fas fa-chevron-right"></i></label>
+                    </div>
+
+                    <!-- Página 1 -->
+                    <div class="pagina" id="pag1">
+
+                        <div class="pagina-esquerda"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\home\folhaDeRosto.png'%})">
+
+
+                            <label class="esquerda" for="checkbox-pag1"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img id="capa" src="{%static 'C:\Kafka\assets\static\img\home\geek-onePiece.jpg'%}"
+                                alt="Capa do Mangá One Piece volume 1.">
+                            <label class="direita" for="checkbox-pag1"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Página 2 -->
+                    <div class="pagina" id="pag2">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>One Piece Vol. 1 Capa comum</h1>
+                            <p class="autor">Eiichiro Oda</p>
+                            <h2>R$29,70</h2>
+                            <p class="inicio">A tripulação pirata mais famosa dos quadrinhos finalmente joga sua âncora
+                                de novo no
+                                Brasil! Com roteiro e arte de Eiichiro Oda, o mangá de maior sucesso de todos os
+                                tempos retorna ao país, agora sob a bandeira Planet Mangá, da Panini Comics! Para
+                                ser o rei dos piratas, Luffy, o homem-borracha, precisa reunir uma tripulação e
+                                encontrar o maior de todos os tesouros. No caminho, enfrentará a Marinha, monstros,
+                                e muitos outros piratas que têm o mesmo objetivo. Então prepare-se pra encarar os
+                                perigos dos mares. A maior aventura de todas vai recomeçar!</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag2"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img id="capa" src="{%static 'C:\Kafka\assets\static\img\home\ebook-casamento.jpg'%}"
+                                alt="Capa do livro Um Casamento Forçado onde um homem branco sem camisa com uma tatuagem tribal que vai do peito direito ao pulso direito ajoelhado com as mãos amarradas por cordas">
+                            <label class="direita" for="checkbox-pag2"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Página 3 -->
+                    <div class="pagina" id="pag3">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>UM CASAMENTO FORÇADO</h1>
+                            <p class="autor">Ivy Matarazzo</p>
+                            <h2>R$2,29</h2>
+                            <p class="inicio">Constantini Erden é um cirurgião conceituado nos Estados Unidos,
+                                mulherengo. Quando seu pai fica à beira
+                                da morte, ele tem que regressar à Turquia para assumir os negócios da família.
+                                Mas, como tudo que é ruim só tende a piorar, precisará se casar com uma desconhecida,
+                                para que todos os seus bens não sejam doados.
+
+                                Noor Volat é uma jovem que passou a vida reclusa, esperando o momento de seu
+                                casamento. Com um pai autoritário e abusivo, a garota idealiza no próprio
+                                casamento à felicidade. Mas o que a jovem não sabe é que o seu prometido não
+                                está nem um pouco interessado em se casar.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag3"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img id="capa"
+                                src="{%static 'C:\Kafka\assets\static\img\home\infantil-dinossauro.jpg'%}"
+                                alt="Uma area arborizada com um dinoussauro verde anda com uma expressão triste. Ao fundo outros 3 dinoussauros brincam e sorriem.">
+                            <label class="direita" for="checkbox-pag3"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Página 4 -->
+                    <div class="pagina" id="pag4">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>O Dinossauro Sem Talento: confiança, habilidade, educação.</h1>
+                            <p class="autor">Hugo Fabrício de Medeiros</p>
+                            <h2>R$9,99</h2>
+                            <p class="inicio">Elogios podem prejudicar a autoestima dos filhos.
+                                A afirmação pode parecer estranha, mas é verdadeira. Muitos pais erram ao
+                                elogiar seus filhos de forma exagerada quando são pequenos.
+
+                                Quando os filhos pensam que já estão fazendo algo incrível, eles param de se
+                                esforçar. E é o esforço que constrói competência e confiança.
+                                Ou seja, errar, tentar de novo e melhorar cada vez mais.
+
+                                Embarque nessa historinha incrível sobre um simpático dinossauro que passou por
+                                tudo isso e aprendeu a desenvolver seu talento e sua autoestima.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag4"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="{%static 'C:\Kafka\assets\static\img\home\promoçao-herança.jpg'%}"
+                                alt="Um fundo verde oliva no centro há um quadro com moldura dourada onde um Dragão verde com detalhes amarelos posa de perfil.">
+                            <label class="direita" for="checkbox-pag4"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Página 5 -->
+                    <div class="pagina" id="pag5">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>Herança (Ciclo A Herança Livro 4)</h1>
+                            <p class="autor">Christopher Paolini</p>
+                            <h2>R$79,92</h2>
+                            <p class="inicio">Não muito tempo atrás, Eragon – Matador de Espectros, Cavaleiro de Dragão
+                                –, nada
+                                mais era do que um pobre menino de fazenda. Seu dragão, Saphira, não passava de
+                                uma pedra azul na floresta. Agora, o destino de toda uma civilização repousa
+                                sobre seus ombros.Longos meses de lutas e treinamentos trouxeram vitórias e
+                                esperança, assim como perdas dolorosas. Mas a verdadeira batalha ainda está por
+                                vir: eles precisam enfrentar Galbatorix. Não
+                                haverá segunda chance. Mas será que conseguirão derrubar o rei do mal e
+                                restabelecer a justiça na Alagaësia? E a que custo?</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag5"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="{%static 'C:\Kafka\assets\static\img\home\estudos-ingles.jpg'%}"
+                                alt="Um fundo branco com o titulo Contos em Inglês no centro. Nas bordas vemos icones como a bandeira da Inglaterra, um guarda-chuva azul aberto, um guarda real, uma coroa e uma hora gigante, dispostos aleatoriamente">
+                            <label class="direita" for="checkbox-pag5"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Página 6 -->
+                    <div class="pagina" id="pag6">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>Aprenda Inglês com Contos Incríveis para Iniciantes e Intermediários</h1>
+                            <p class="autor">Jack Cactus</p>
+                            <h2>R$73,23</h2>
+                            <p class="inicio">Melhore suas habilidades de leitura, pronúncia e compreensão auditiva.
+                                Aprimore
+                                seu vocabulário de maneira fácil e agradável, com 7 contos divertidos e
+                                envolventes, para iniciantes e intermediários.
+
+                                ÁUDIO EM INGLÊS GRÁTIS!
+
+                                Ler e ouvir histórias em Inglês é um método eficiente e agradável de se aprender
+                                o idioma. É uma forma de se imergir e se envolver em todos os sentidos do
+                                aprendizado.
+
+                                Você terá em suas mãos 7 contos escritos em Inglês e Português, além do áudio em
+                                Inglês.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag6"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="{%static 'C:\Kafka\assets\static\img\home\estrangeiro-valise.jpg'%}"
+                                alt="Uma escadaria com casas e arvores ao redor onde um homem de terno e gravata segura uma pasta na mão e ao seu lado há uma mulher com cabelos escuros até o ombro vestida com uma blusa social vermelha e uma calça branca olhando para frente.">
+                            <label class="direita" for="checkbox-pag6"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Página 7 -->
+                    <div class="pagina" id="pag7">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>A Valise do Professor (Mangá Volume Único)</h1>
+                            <p class="autor">JIRO TANIGUCHI</p>
+                            <h2>R$33,96</h2>
+                            <p class="inicio">Tsukiko Omachi, uma mulher de 37 anos que leva a vida de solteira entre o
+                                trabalho no escritório e uma rotina solitária. Certo dia, em uma de suas idas a
+                                um bar que frequenta, reencontra um antigo professor dos tempos de ensino médio,
+                                com quem começa a dividir os drinques e petiscos. Aos poucos, a casualidade
+                                evolui para um relacionamento repleto de pequenas descobertas e, à medida que
+                                Tsukiko conhece mais sobre seu amigo trinta anos mais velho, a diferença de
+                                idade começa a se diluir.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                        </div>
+
+                    </div>
+
+                    <div class="tampa-capa">
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <!-- Cards -->
+            <div class="area-card">
+
+                <h2>Ebook</h2>
+
+                <div class="slider js-slider">
+
+                    <!-- Card 1 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\ebook\a-hipotese-do-amor.jpg'%}" alt="">
+                        <h3>A Hipótese do Amor</h3>
+
+                        <p class="autor">Ali Hazzewood</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Olive Smith, aluna do doutorado em Biologia da Universidade Stanford, acredita na
+                                ciência
+                                – não
+                                em
+                                algo incontrolável como o amor.</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$29,61</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem"
+                            src="{%static 'C:\Kafka\assets\static\img\ebook\assombrando-adeline.jpg'%}" alt="">
+                        <h3>Assombrando Adeline</h3>
+                        <p class="autor"> H.D. Carlton </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Posso manipular as emoções de qualquer um que me permita.
+                                Vou te machucar, te fazer rir, te fazer chorar e suspirar.Mas minhas palavras não o
+                                afetam. Sobretudo quando eu imploro para ele ir embora.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$28,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\ebook\girlslikegirls.jpg'%}"
+                            alt="">
+                        <h3>Girls Like Girls</h3>
+
+                        <p class="autor">HAYLEY KIYOKO</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Coley sente que não é a mesma desde a morte da mãe. Forçada a morar no interior do
+                                Oregon
+                                com o
+                                pai que abandonou a família, a garota se vê sozinha em um lugar desconhecido e
+                                conservador.</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$39,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+
+                        <div class="fav"
+                            style="background-image: url({%static 'C:\Kafka\assets\static\img\ebook\heart-regular-24.png'%})">
+                        </div>
+                        <img class="imagem" src="{%static 'C:\Kafka\assets\static\img\ebook\circo-sombrio.jpg'%}"
+                            alt="">
+                        <h3>Circo Sombrio: contos, terror e psicopatia eBook</h3>
+
+                        <p class="autor">Ariel Yoshida </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p> São 20 contos aterrorizantes. Uma mochileira atacada na floresta, um encontro
+                                romântico
+                                que se torna brutal; um homem desolado que se torna atroz.</p>
+                        </div>
+                        <div class="preco">
+                            <h3 class="valor">R$5,99</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="area-footer">
+
+            <!-- Icons -->
+            <div class="i-r">
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\twitter.png'%}" alt=""></i></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\github.png'%}" alt=""></a>
+                <a href="#"><img src="{%static 'C:\Kafka\assets\static\img\footer\linkedin.png'%}" alt=""></a>
+            </div>
+
+        </div>
+
+
+        <div class="pFooter">
+            <p>Desenvolvido pelo grupo 6 na aula de programação do <a href="">PDA</a> </p>
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
