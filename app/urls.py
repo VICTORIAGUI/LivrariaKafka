@@ -7,11 +7,6 @@ urlpatterns = [
     path('ebook/', views.ebook, name='ebook'),
     path('infantil/', views.infantil, name='infantil'),
     path('importados/', views.importados, name='importados'),
-<<<<<<< HEAD
     path('ofertas/', views.ofertas, name='ofertas'),
     path('quemsomos/', views.quemSomos, name='quemSomos'),
-=======
-    path('quemsomos/', views.quemSomos, name='quemSomos'),
-    path('ofertas/', views.ofertas, name='ofertas')
->>>>>>> master
 ]
