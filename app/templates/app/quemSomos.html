@@ -1,19 +1,15 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="livrariaKafka">
-    <meta name="author" content="Victoria Guimaraes">
-    <meta name="keywords" content="livraria">
     <title>Quem Somos</title>
     <link rel="shortcut icon" href="{%static 'img\header\iconPag.png' %}">
     <link rel="stylesheet" type="text/css" href="{%static 'global/css/reader.css' %}">
     <link rel="stylesheet" type="text/css" href="{%static 'global/css/quemSomos.css' %}">
-    {% comment %} <link rel="stylesheet" type="text/css" href="{%static 'global/css/cards.css' %}"> {% endcomment %}
     <link rel="stylesheet" type="text/css" href="{%static 'global/css/footer.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -21,6 +17,8 @@
 </head>
 
 <body>
+
+
     <header>
 
         <!-- Logo e caixa de pesquisa -->
@@ -48,21 +46,21 @@
                 <!-- Submenu -->
                 <!-- <div class="div-submenu"> -->
                 <ul>
-                    <li class="subMenu"><a href="=">Geek</a></li>
+                    <li class="subMenu"><a href="#">Geek</a></li>
                     <li class="subMenu"><a href="{%url 'ebook'%}">Ebook</a></li>
                     <li class="subMenu"><a href="{%url 'infantil'%}">Infantil</a></li>
                     <li class="subMenu"><a href="{%url 'ofertas'%}">Ofertas</a></li>
-                    <li class="subMenu"><a href="">Estudos</a></li>
+                    <li class="subMenu"><a href="#">Estudos</a></li>
                     <li class="subMenu"><a href="{%url 'importados'%}">Importados</a></li>
                 </ul>
                 </div>
             </li>
-            <li class="menuItens"><a href="">DVDs</a></li>
+            <li class="menuItens"><a href="#">DVDs</a></li>
             <li class="menuItens"><a href="{%url 'quemSomos'%}">Quem Somos</a></li>
-            <li class="menuItens"><a href="">Fale Conosco</a></li>
+            <li class="menuItens"><a href="#">Fale Conosco</a></li>
         </ul>
-    </nav>
 
+    </nav>
 
     <main>
 
@@ -76,28 +74,36 @@
                     <!-- Card 1 -->
                     <div class="card">
 
-                        
+
                         <img class="imagem" src="{%static 'img\quemSomos\victoria.jpg'%}" alt="">
                         <h3>Victória Guimarães</h3>
                         <p class="cargo">Líder do Projeto</p>
+
                         <div class="resumoProfissional">
-                            <p>Sem preferência de Stack, navegando entre front e back. Estudante de Análise e Desenvolvimento de Sistemas. Gosta de criar animações e mais ainda de corrigir bugs.</p>
+                            <p>Sem preferencia de Stack apenas navegando entre front e back. Desenvolvedora FullStack, gosta de criar animações e resolver bugs.</p>
                         </div>
-                        <div class="github">
+
+                        <div class="redes">
+                            <a href="victoriaLinkedin"><img src="{%static 'img\footer\linkedin.png'%}" alt=""></a>
                             <a href="#"><img src="{%static 'img\footer\github.png'%}" alt=""></a>
                         </div>
+           
                     </div>
 
                     <!-- Card 2 -->
                     <div class="card">
 
+
                         <img class="imagem" src="{%static 'img\quemSomos\diogo.jpg' %}" alt="">
                         <h3>Diogo</h3>
-                        <p class="cargo">Scrum Master</p>
+                        <p class="cargo">Scrum master</p>
+
                         <div class="resumoProfissional">
                             <p>Estudante de desenvolvimento web, entusiasta de front-end e back-end. Perfil generalizado, gosta de desenvolver um pouco de tudo.</p>
                         </div>
-                        <div class="github">
+           
+                        <div class="redes">
+                            <a href="#"><img src="{%static 'img\footer\linkedin.png'%}" alt=""></a>
                             <a href="#"><img src="{%static 'img\footer\github.png'%}" alt=""></a>
                         </div>
                     </div>
@@ -105,14 +111,17 @@
                     <!-- Card 3 -->
                     <div class="card">
 
+
                         <img class="imagem" src="{%static 'img\quemSomos\lais.jpg'%}" alt="">
                         <h3>Lais Alcantara</h3>
                         <p class="cargo">Colaboradora</p>
-        
+
                         <div class="resumoProfissional">
-                            <p>Entusiasta de front-end, gosta de exercer a cominicação aplicada a desenvolvimento visual e criativo.</p>
+                            <p>Entusiasta de front-end, busca exercer a cominicação aplicada a desenvolvimento visual e criativo.</p>
                         </div>
-                        <div class="github">
+
+                        <div class="redes">
+                            <a href="#"><img src="{%static 'img\footer\linkedin.png'%}" alt=""></a>
                             <a href="#"><img src="{%static 'img\footer\github.png'%}" alt=""></a>
                         </div>
 
@@ -121,29 +130,29 @@
                     <!-- Card 4 -->
                     <div class="card">
 
-                        <img class="imagem" src="{%static 'img\quemSomos\natalia.jpg'%}" alt="">
-                        <h3>Natalia</h3>
 
+                        <img class="imagem" src="{%static 'img\quemSomos\natalia.jpg'%}" alt="">
+                        <h3>Natália</h3>
                         <p class="cargo">Colaboradora</p>
+
                         <div class="resumoProfissional">
                             <p>Entusiasta de back-end. Gosta de saber como as coisas funcionam e de lidar com a parte que o usuário não vê.</p>
                         </div>
-                        <div class="github">
+
+                        <div class="redes">
+                            <a href="#"><img src="{%static 'img\footer\linkedin.png'%}" alt=""></a>
                             <a href="#"><img src="{%static 'img\footer\github.png'%}" alt=""></a>
                         </div>
-                    </div>
 
+                    </div>
 
                 </div>
             </div>
         </section>
 
+
     </main>
 
-
-
-
-    <!-- Footer -->
     <footer>
         <div class="area-footer">
 
@@ -159,7 +168,6 @@
 
 
     </footer>
-
 
 </body>
 
