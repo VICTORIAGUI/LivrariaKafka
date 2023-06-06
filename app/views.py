@@ -17,3 +17,11 @@ def infantil(request): #Função para chamar a página infantil
 def importados(request): #Função para chamar a página importados
     return render(request,
     'app/importados.html')
+
+def ofertas(request): #Função para chamar a página ofertas
+    return render(request, 
+    'app/ofertas.html')
+
+def quemSomos(request): #Função para chamar á página quem somos
+    return render(request,
+    'app/quemSomos.html')
