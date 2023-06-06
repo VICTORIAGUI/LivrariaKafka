@@ -21,6 +21,11 @@ body {
     background-color: var(--cor3);
 }
 
+/* Declarando p do footer */
+.pFooter p {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
 /* Area do card */
 .area-card {
     padding: 2rem 0;

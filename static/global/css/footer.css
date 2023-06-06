@@ -1,3 +1,20 @@
+@charset "utf-8";
+
+Variaveis:root {
+    --cor1: #5e0b15;
+    --cor2: #90323d;
+    --cor3: #d9cab3;
+    --cor4: #bc8034;
+    --cor5: #000000;
+    --branco: #ffffff;
+}
+
+/* Importando fonte */
+@font-face {
+    font-family: disquete;
+    src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
+}
+
 /* Definindo backgroun e margin do footer */
 footer {
     background-color: var(--cor1);
@@ -62,6 +79,10 @@ footer {
 .pFooter {
     background-color: var(--cor2);
     padding: 10px 10px 10px;
+}
+
+.pFooter p {
+    font-family: disquete !important;
 }
 
 /* Alinhando ao centro e declarando cor da fonte. */

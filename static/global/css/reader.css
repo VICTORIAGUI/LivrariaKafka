@@ -23,6 +23,11 @@
     box-sizing: border-box;
 }
 
+/* Declarando p do footer */
+.pFooter p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* Alterando posição e cor do header */
 header {
     display: flex;
