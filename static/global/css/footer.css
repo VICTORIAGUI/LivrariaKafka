@@ -81,10 +81,6 @@ footer {
     padding: 10px 10px 10px;
 }
 
-.pFooter p {
-    font-family: disquete !important;
-}
-
 /* Alinhando ao centro e declarando cor da fonte. */
 .pFooter p {
     display: flex;
