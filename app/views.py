@@ -18,7 +18,6 @@ def importados(request): #Função para chamar a página importados
     return render(request,
     'app/importados.html')
 
-<<<<<<< HEAD
 def ofertas(request): #Função para chamar a página ofertas
     return render(request, 
     'app/ofertas.html')
@@ -26,12 +25,3 @@ def ofertas(request): #Função para chamar a página ofertas
 def quemSomos(request): #Função para chamar á página quem somos
     return render(request,
     'app/quemSomos.html')
-=======
-def ofertas(request):
-    return render(request,
-    'app/ofertas.html')
-
-def quemSomos(request):
-    return render(request,
-    'app/quemSomos.html')
->>>>>>> master
