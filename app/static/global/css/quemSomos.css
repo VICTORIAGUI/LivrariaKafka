@@ -16,23 +16,50 @@
     src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
 }
 
+<<<<<<< HEAD
 /* Backgroun da pagina */
+=======
+>>>>>>> master
 body {
     background-color: var(--cor3);
 }
 
+<<<<<<< HEAD
 /* Declarando p do footer */
 .pFooter p {
     font-family: 'Courier New', Courier, monospace;
 }
 
 /* Area do card */
+=======
+>>>>>>> master
 .area-card {
     padding: 2rem 0;
     padding: 2rem 0;
     margin-left: 50px;
 }
 
+<<<<<<< HEAD
+=======
+.area-card h1 {
+    font-family: disquete;
+    font-size: 35px;
+    color: var(--cor1);
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilizando h3 */
+.area-card h3 {
+    color: var(--cor1);
+    font-family: disquete;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+>>>>>>> master
 /* Displey da div */
 .slider {
     display: flex;
@@ -48,23 +75,36 @@ body {
     padding: 30px;
     box-shadow: 0 0 10px rgb(41, 41, 41);
     width: 300px;
+<<<<<<< HEAD
     height: 520px;
     display: flex !important;
+=======
+    height: 550px;
+    display: flex;
+>>>>>>> master
     flex-direction: column;
     align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 /* Hover do card */
 .slider .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
+<<<<<<< HEAD
 /* Tamanho das fotos */
+=======
+>>>>>>> master
 .slider .card .imagem {
     width: 200px;
     height: 300px;
     border-radius: 5px;
+<<<<<<< HEAD
     margin-bottom: 5px;
 }
 
@@ -86,11 +126,22 @@ body {
 
 
 /* Estilização da resumoProfissional */
+=======
+}
+
+.area-card h1 {
+    font-family: disquete;
+    color: var(--cor1);
+}
+
+/* Estilização da sinopse */
+>>>>>>> master
 .card .resumoProfissional {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     width: 280px;
     height: 280px;
+<<<<<<< HEAD
     margin-bottom: 5px;
 }
 
@@ -104,18 +155,47 @@ body {
 
 /* Tamanho dos imagns */
 .redes img {
+=======
+    margin-top: -8px;
+    margin-bottom: -20px;
+}
+
+/* Estilização do p autor */
+.card .cargo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--cor2);
+    margin-top: -10px;
+    /* margin-bottom: -10px; */
+}
+
+.github {
+    margin-top: -10px;
+}
+
+.github img {
+>>>>>>> master
     width: 30px;
     margin: 5px;
 }
 
+<<<<<<< HEAD
 /* Declarando as decorações do link como none */
 .redes a {
+=======
+.github a {
+>>>>>>> master
     display: inline-flex;
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* Circulo do Icon */
 .redes a {
+=======
+.github a {
+>>>>>>> master
     display: inline-flex;
     text-decoration: none;
     width: 50px;
@@ -129,6 +209,7 @@ body {
     font-size: 70px;
 }
 
+<<<<<<< HEAD
 /* Cor do hover */
 .redes a:hover {
     background-color: var(--cor4);
@@ -144,3 +225,18 @@ body {
     transform: rotate(360deg);
 }
 
+=======
+.github a:hover {
+    background-color: var(--cor1);
+}
+
+.github a img {
+    transition: 00.4s all;
+}
+
+.github a:hover>img {
+    transform: rotate(360deg);
+}
+
+
+>>>>>>> master
