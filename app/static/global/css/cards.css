@@ -18,7 +18,7 @@
 
 /* Declarando margin */
 .area-card {
-    margin-top: -80px;
+ margin-bottom: 60px;
 }
 
 /* Estilizando h1 */
@@ -114,7 +114,8 @@
 /* Estilização das estrelas */
 .estrelas i {
     color: #bc8034;
-    margin-top: 15px;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 
 /* Estilização da sinopse */
@@ -123,6 +124,7 @@
     font-size: 18px;
     width: 280px;
     height: 280px;
+    margin-bottom: -20px;
 }
 
 /* Estilização do p autor */
