@@ -36,12 +36,9 @@
 
         <!-- Lista de icons -->
         <ul>
-            <li><a href="#" class="iconMenu"><img
-                        src="{%static 'img\header\iconHeart.png' %}"></a></li>
-            <li><a href="#" class="iconMenu"><img
-                        src="{%static 'img\header\iconCar.png' %}"></a></li>
-            <li><a href="#" class="iconMenu"><img
-                        src="{%static 'img\header\iconUser.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img src="{%static 'img\header\iconHeart.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img src="{%static 'img\header\iconCar.png' %}"></a></li>
+            <li><a href="#" class="iconMenu"><img src="{%static 'img\header\iconUser.png' %}"></a></li>
         </ul>
 
     </header>
@@ -76,21 +73,14 @@
             <!-- Menu de icones -->
             <div class="icons-circulo">
                 <ul>
-                    <li><a href="#"><img src="{%static 'img\home\hand-spock-solid.png'%}"
+                    <li><a href="#"><img src="{%static 'img\home\hand-spock-solid.png'%}" alt=""></a></li>
+                    <li><a href="{%url 'ebook'%}"><img src="{%static 'img\home\mobile-screen-button-solid.png'%}"
                                 alt=""></a></li>
-                    <li><a href="{%url 'ebook'%}"><img
-                                src="{%static 'img\home\mobile-screen-button-solid.png'%}"
+                    <li><a href="{%url 'infantil'%}"><img src="{%static 'img\home\cubes-stacked-solid.png'%}"
                                 alt=""></a></li>
-                    <li><a href="{%url 'infantil'%}"><img
-                                src="{%static 'img\home\cubes-stacked-solid.png'%}"
-                                alt=""></a></li>
-                    <li><a href="{%url 'ofertas'%}"><img src="{%static 'img\home\tags-solid.png'%}"
-                                alt=""></a></li>
-                    <li><a href="#"><img
-                                src="{%static 'img\home\graduation-cap-solid.png'%}"
-                                alt=""></a></li>
-                    <li><a href="{%url 'importados'%}"><img
-                                src="{%static 'img\home\earth-americas-solid.png'%}"
+                    <li><a href="{%url 'ofertas'%}"><img src="{%static 'img\home\tags-solid.png'%}" alt=""></a></li>
+                    <li><a href="#"><img src="{%static 'img\home\graduation-cap-solid.png'%}" alt=""></a></li>
+                    <li><a href="{%url 'importados'%}"><img src="{%static 'img\home\earth-americas-solid.png'%}"
                                 alt=""></a></li>
                 </ul>
             </div>
@@ -113,8 +103,7 @@
                 <!-- Capa do livro -->
                 <div class="livro">
                     <!-- Usando o style inline pois o django não reconhece o background-image no css. -->
-                    <div class="capa"
-                        style="background-image: url({%static 'img\home\mais-vendidos.png'%})">
+                    <div class="capa" style="background-image: url({%static 'img\home\mais-vendidos.png'%})">
                         <label for="checkbox-capa"><i class="fas fa-chevron-right"></i></label>
                     </div>
 
@@ -197,8 +186,7 @@
 
                         <div class="pagina-direita" id="verso">
 
-                            <img id="capa"
-                                src="{%static 'img\home\infantil-dinossauro.jpg'%}"
+                            <img id="capa" src="{%static 'img\home\infantil-dinossauro.jpg'%}"
                                 alt="Uma area arborizada com um dinoussauro verde anda com uma expressão triste. Ao fundo outros 3 dinoussauros brincam e sorriem.">
                             <label class="direita" for="checkbox-pag3"><i class="fas fa-chevron-left"></i></label>
 
@@ -344,7 +332,7 @@
 
         <section>
 
-            <!-- Cards -->
+            <!-- Cards Ebook -->
             <div class="area-card">
 
                 <h2>Ebook</h2>
@@ -354,11 +342,9 @@
                     <!-- Card 1 -->
                     <div class="card">
 
-                        <div class="fav"
-                            style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                        <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
                         </div>
-                        <img class="imagem"
-                            src="{%static 'img\ebook\a-hipotese-do-amor.jpg'%}" alt="">
+                        <img class="imagem" src="{%static 'img\ebook\a-hipotese-do-amor.jpg'%}" alt="">
                         <h3>A Hipótese do Amor</h3>
 
                         <p class="autor">Ali Hazzewood</p>
@@ -384,11 +370,9 @@
                     <!-- Card 2 -->
                     <div class="card">
 
-                        <div class="fav"
-                            style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                        <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
                         </div>
-                        <img class="imagem"
-                            src="{%static 'img\ebook\assombrando-adeline.jpg'%}" alt="">
+                        <img class="imagem" src="{%static 'img\ebook\assombrando-adeline.jpg'%}" alt="">
                         <h3>Assombrando Adeline</h3>
                         <p class="autor"> H.D. Carlton </p>
                         <div class="estrelas"><i class="fa-solid fa-star"></i>
@@ -411,11 +395,9 @@
                     <!-- Card 3 -->
                     <div class="card">
 
-                        <div class="fav"
-                            style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                        <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
                         </div>
-                        <img class="imagem" src="{%static 'img\ebook\girlslikegirls.jpg'%}"
-                            alt="">
+                        <img class="imagem" src="{%static 'img\ebook\girlslikegirls.jpg'%}" alt="">
                         <h3>Girls Like Girls</h3>
 
                         <p class="autor">HAYLEY KIYOKO</p>
@@ -441,11 +423,9 @@
                     <!-- Card 4 -->
                     <div class="card">
 
-                        <div class="fav"
-                            style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                        <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
                         </div>
-                        <img class="imagem" src="{%static 'img\ebook\circo-sombrio.jpg'%}"
-                            alt="">
+                        <img class="imagem" src="{%static 'img\ebook\circo-sombrio.jpg'%}" alt="">
                         <h3>Circo Sombrio: contos, terror e psicopatia eBook</h3>
 
                         <p class="autor">Ariel Yoshida </p>
@@ -467,14 +447,246 @@
                     </div>
 
                 </div>
-            </div>
+
             </div>
 
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <section>
+
+        <!-- Card Infantil -->
+        <div class="area-card">
+            <h2>Infantil</h2>
+
+            <div class="slider">
+
+                <!-- Card 1 -->
+                <div class="card">
+
+                    <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem" src="{%static 'img\infantil\creche-educacao-infantil.jpg'%}" alt="">
+                    <h3>Creche- Educacao Infantil (Escolinha Todolivro)</h3>
+
+                    <p class="autor">Maria Angela Finzetto</p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>Exercícios de apoio escolar com atividades de colorir, ligar pontos e associar elementos
+                            por semelhança ou analogia de função, entre outras.</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$10,21</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+
+                    <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem" src="{%static 'img\infantil\conto-caes.jpg' %}" alt="">
+                    <h3>Contos De Cães - Histórias Verdadeiras Sobre Cães</h3>
+                    <p class="autor">Penelope Rich</p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>Coragem, lealdade e inteligência aquecerá o coração de qualquer amante de cães. Descubra
+                            sobre Mera, o destemido cão montanhista, Jasmine, e Otto.
+                        </p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$19,90</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+
+                    <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem" src="{%static 'img\infantil\aprenda-em-casa.jpg'%}" alt="">
+                    <h3>Coleção Aprenda em Casa</h3>
+
+                    <p class="autor"> Vários Autores </p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>Estes livros irão ajudar a criança a reforçar conteúdos escolares além de desenvolver
+                            habilidades importantes como: raciocínio lógico, criatividade e vocabulário.</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$12,40</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+
+                    <div class="fav" style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem" src="{%static 'img\infantil\tuerma-da-monica.jpg'%}" alt="">
+                    <h3>Turma da Mônica - Contos da Carochinha</h3>
+
+                    <p class="autor"> Mauricio Sousa</p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>11 contos que vivem para sempre no mundo da imaginação de todas as crianças. As histórias trazem à tona valores universais como o esforço e a superação, a amizade e o amor. </p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$12,40</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <!-- Card Importados -->
+        <div class="area-card">
+            <h2>Importados</h2>
+
+            <div class="slider">
+
+                <!-- Card 1 -->
+                <div class="card">
+
+                    <div class="fav"
+                        style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem" src="{%static 'img\importados\la-casa-de-los-espiritos.jpg'%}"
+                        alt="">
+                    <h3>La Casa de los Espíritus</h3>
+
+                    <p class="autor">Isabel Allende </p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>La casa de los espíritus' narra la saga familiar de los Trueba, desde principios de siglo hasta nuestra época. Magistralmente ambientada en algún lugar de América Latina.</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$39,40</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="card">
+
+                    <div class="fav"
+                        style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem"
+                        src="{%static 'img\importados\evelyn-hugo.jpg' %}" alt="">
+                    <h3>Seven Husbands of Evelyn Hugo</h3>
+                    <p class="autor">Taylor Jenkins Reid </p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>A legendary film actress reflects on her relentless rise to the top and the risks she took, the loves she lost, and the long-held secrets the public could never imagine.</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$2,29</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+
+                    <div class="fav"
+                        style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem"
+                        src="{%static 'img\importados\el-principito.jpg'%}" alt="">
+                    <h3>El Principito</h3>
+
+                    <p class="autor"> Antoine de Saint-Exupery</p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p>"He aquí mi secreto, que no puede ser más simple: solo con el corazón se puede ver bien; lo esencial es invisible a los ojos". Relato filosófico que interroga acerca de la relación del ser humano con su prójimo y con el mundo.</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$42,29</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+
+                    <div class="fav"
+                        style="background-image: url({%static 'img\ebook\heart-regular-24.png'%})">
+                    </div>
+                    <img class="imagem"
+                        src="{%static 'img\importados\the-cat.jpg'%}"
+                        alt="">
+                    <h3>The Cat in the Hat Comes Back!</h3>
+
+                    <p class="autor"> Dr Seuss</p>
+                    <div class="estrelas"><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="sinopse">
+                        <p> It's winter and they have mountains of snow to shovel. So when the Cat comes to visit, he decides to go inside and to take a bath. No problem, right? Wrong!</p>
+                    </div>
+                    <div class="preco">
+                        <h3 class="valor">R$34,90</h3>
+                    </div>
+                    <a href="#"><button>Comprar</button></a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Footer -->
     <footer>
         <div class="area-footer">
